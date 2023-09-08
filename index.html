@@ -1,1 +1,38 @@
+<!-- by christ-offert -->
+<!DOCTYPE html>
+<html lang="en" id="the-html" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="shortcut icon" href="../images/icn.png" type="image/x-icon">
+  <title>my icons</title>
+</head>
+<body class="bg-slate-200 text-slate-950 dark:bg-slate-900 dark:text-slate-200">
 
+  <!-- LOADING -->
+  <section id="loading" class="bg-black backdrop-blur w-full h-full flex flex-col justify-center items-center fixed top-0 left-0 overflow-hidden z-50 cursor-wait">
+    <h2 id="" class="text-slate-200 text-4xl font-semibold select-none">my <span class="text-blue-500">icons</span></h2>
+    <h3 id="" class="text-orange-500 select-none animate-pulse">by christ-offert</h3>
+  </section>
+  <!-- LOADING -->
+
+  <script src="js/lockFiles.js"></script>
+  <script src="js/fontawesome.js"></script>
+  <script src="js/index.js"></script>
+
+  <script>
+
+    const loading = document.getElementById('loading');
+
+    const index = new Index(libraries);    
+    setTimeout(() => {
+      loading.classList.add('hidden');
+    }, 2000);
+
+  </script>
+
+</body>
+</html>
