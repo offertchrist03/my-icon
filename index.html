@@ -1,45 +1,67 @@
 <!-- by christ-offert -->
 <!DOCTYPE html>
 <html lang="en" id="the-html" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/output.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="shortcut icon" href="images/icn.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
-  <title>my icons</title>
-</head>
+    <!-- Liens cdn pour les bibliotheques d'icones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+    />
+    <!-- FIN Liens cdn pour les bibliotheques d'icones -->
 
-<body class="bg-slate-200 text-slate-950 dark:bg-slate-900 dark:text-slate-200">
+    <link rel="shortcut icon" href="images/icn.png" type="image/x-icon" />
+    <title>my icons</title>
+  </head>
 
-  <!-- LOADING -->
-  <section id="loading"
-    class="bg-black backdrop-blur w-full h-full flex flex-col justify-center items-center fixed top-0 left-0 overflow-hidden z-50 cursor-wait">
-    <h2 id="" class="text-slate-200 text-xl font-semibold select-none">my <span class="text-blue-500">icons</span></h2>
-    <h2 id="" class="text-xl text-blue-500"><i class="fa fa-spinner animate-spin"></i></h2>
-    <h3 id="" class="text-orange-500 select-none animate-pulse">by christ-offert</h3>
-  </section>
-  <!-- LOADING -->
+  <body
+    class="bg-slate-200 text-slate-950 dark:bg-slate-900 dark:text-slate-200"
+  >
+    <!-- LOADING -->
+    <section
+      id="loading"
+      class="bg-black backdrop-blur w-full h-full flex flex-col justify-center items-center fixed top-0 left-0 overflow-hidden z-50 cursor-wait"
+    >
+      <h2 id="" class="text-slate-200 text-xl font-semibold select-none">
+        my <span class="text-blue-500">icons</span>
+      </h2>
+      <h2 id="" class="text-xl text-blue-500">
+        <i class="fa fa-spinner animate-spin"></i>
+      </h2>
+      <h3 id="" class="text-orange-500 select-none animate-pulse">
+        by christ-offert
+      </h3>
+    </section>
+    <!-- LOADING -->
 
-  <script src="src/fontawesome.js"></script>
-  <script src="src/simple-line-icon.js"></script>
-  <script src="src/libraries.js"></script>
-  <script src="src/index.js"></script>
+    <!-- importer les donnees des icones -->
+    <script src="src/libs/fontawesome.js"></script>
+    <script src="src/libs/simple-line-icon.js"></script>
+    <!-- importer les donnees des icones -->
 
-  <script>
+    <!-- importer les fichiers JS sources -->
+    <script src="src/libraries.js"></script>
+    <script src="src/index.js"></script>
+    <!-- importer les fichiers JS sources -->
 
-    const loading = document.getElementById('loading');
+    <script>
+      // recuperer l'element #loading
+      const loading = document.getElementById("loading");
 
-    const index = new Index(mylibraries);
-    setTimeout(() => {
-      loading.classList.add('hidden');
-    }, 2000);
-
-  </script>
-
-</body>
-
+      // le variable << mylibraries >> provient de "src/libraries.js"
+      // la classe << Index >> lance l'app
+      const index = new MyIcon(mylibraries);
+      setTimeout(() => {
+        loading.classList.add("hidden");
+      }, 2000);
+    </script>
+  </body>
 </html>
