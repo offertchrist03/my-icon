@@ -346,7 +346,7 @@ class MyIcon {
   createBody() {
     this.section = document.createElement("section");
     this.section.id = `main`;
-    this.section.className = `max-[640px]:w-[80%] sm:container min-h-[75vh] pb-5 mx-auto z-0`;
+    this.section.className = `max-[640px]:w-[80%] sm:container max-w-5xl min-h-[75vh] pb-5 mx-auto z-0`;
     this.bodies.appendChild(this.section);
   }
 
