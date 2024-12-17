@@ -131,7 +131,7 @@ class MyIcon {
     this.bodies.appendChild(this.navbar);
 
     const navDiv = document.createElement("div");
-    navDiv.className = `container h-full mx-auto flex justify-between items-center relative`;
+    navDiv.className = `container h-full px-5 sm:px-0 mx-auto flex justify-between items-center relative`;
     this.navbar.appendChild(navDiv);
 
     // menu
@@ -289,7 +289,7 @@ class MyIcon {
   createLi(categ, icn) {
     const li = document.createElement("li");
     li.setAttribute("data-icon", `${categ} ${icn}`);
-    li.className = `myicon-item w-48 h-48 text-xl rounded border border-slate-400 dark:border-slate-700 bg-slate-300 dark:bg-slate-800 flex flex-col justify-center items-center gap-1 relative select-none z-0`;
+    li.className = `myicon-item w-full aspect-square text-xl rounded border border-slate-400 dark:border-slate-700 bg-slate-300 dark:bg-slate-800 flex flex-col justify-center items-center gap-1 relative select-none z-0`;
     this.listIcons.appendChild(li);
 
     // la categorie de l'icone (ex: regular, far)
@@ -363,7 +363,7 @@ class MyIcon {
 
     // ajoute le conteneur de tous les icones dans le DOM
     this.listIcons = document.createElement("ul");
-    this.listIcons.className = `max-[640px]:justify-center w-full min-h-[10vh] grid grid-cols-[repeat(auto-fill,minmax(192px,192px))] gap-x-2 gap-y-4 place-items-center justify-between`;
+    this.listIcons.className = `max-[640px]:justify-center w-full min-h-[10vh] grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-x-2 gap-y-4 place-items-center justify-between`;
     this.section.appendChild(this.listIcons);
 
     // ajoute le conteneur de tous les actions dans le DOM
